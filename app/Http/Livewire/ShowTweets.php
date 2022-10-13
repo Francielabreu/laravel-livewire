@@ -49,4 +49,6 @@ class ShowTweets extends Component
     {
         $tweet->likes()->delete();
     }
+
+    
 }

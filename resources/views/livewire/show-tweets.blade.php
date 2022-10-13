@@ -14,6 +14,12 @@
     
 <hr>
     @foreach ($tweets as $tweet)
+        @if ($tweet->user->photo)
+        <img src="{{ url("storage/{$tweet->user->photo}") }}" width="70px" height="70px" alt="">
+        @else
+            <img src="{{ url('image/users.png') }}" width="70px" height="70px" alt="">
+        @endif
+
         {{ $tweet->user->name }} - {{ $tweet->content }}
 
         @if($tweet->likes->count())
