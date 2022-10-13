@@ -12,24 +12,10 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-        <!-- Styles -->
-        @livewireStyles
     </head>
-    <body class="font-sans antialiased">
-        <x-jet-banner />
-
-        <div class="min-h-screen bg-gray-100">
-           
-
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+    <body>
+        <div class="font-sans text-gray-900 antialiased">
+            {{ $slot }}
         </div>
-
-        @stack('modals')
-
-        @livewireScripts
     </body>
 </html>
