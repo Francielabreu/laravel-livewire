@@ -11,7 +11,7 @@ class ShowTweets extends Component
 {
     use WithPagination;
 
-    public $content = 'Apenas um testes'; 
+    public $content = ''; 
 
     protected $rules = [
         'content' => 'required|min:3|max:255'
