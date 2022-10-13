@@ -14,7 +14,13 @@
     
 <hr>
     @foreach ($tweets as $tweet)
-        {{ $tweet->user->name }} - {{ $tweet->content }}<br>
+        {{ $tweet->user->name }} - {{ $tweet->content }}
+        @if($tweet->likes->count())
+            <a href="">Deslike</a>
+        @else
+        <a href="">Like</a>
+        @endif
+        <br>
     @endforeach
 </div>
 
